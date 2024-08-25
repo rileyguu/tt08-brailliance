@@ -9,12 +9,15 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-Explain how your project works
+Input ASCII signals to 8-bit braille outputs (First two bits are zeroed for redundancy)
 
 ## How to test
 
-Explain how to use your project
+Connect to FPGA and use breadboards + LEDs/Push Pull Solenoid Actuators for product demonstration
 
 ## External hardware
 
-List external hardware used in your project (e.g. PMOD, LED display, etc), if any
+- Breadboard
+- Jumper Wires
+- LEDs / Push Pull Solenoid Actuators
+- Resistors
