@@ -24,9 +24,9 @@ module tt_um_example (
 
     // Instantiate the braille_converter_top module
     braille_converter_top braille_top_inst (
-        .clk(clk),               // Clock from the template's clock input
+        .clk(clk),               // Clock comes from the template's clock input
         .reset(reset),           // Reset (active-high) from inverted rst_n
-        .next(ui_in[2]),         // 'next' signal mapped to ui_in[2] (adjust as needed)
+        .next(ui_in[0]),         // 'next' signal is now mapped to ui_in[0]
         .reader1_out(reader1_out) // Internal wire reader1_out connected to the output of the braille converter
     );
 
@@ -38,6 +38,6 @@ module tt_um_example (
     assign uio_oe  = 8'b0;        // Set IOs in input mode (0=input)
 
     // List all unused inputs to prevent warnings
-    wire _unused = &{ena, uio_in, ui_in[7:3], 1'b0};
+    wire _unused = &{ena, uio_in, ui_in[7:1], 1'b0};  // Updated to account for ui_in[0] being used
 
 endmodule
