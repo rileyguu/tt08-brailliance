@@ -105,7 +105,7 @@ module reader (
             loaded_braille_size <= 0;
             for (i = 0; i < 256; i = i + 1) begin
                 //buffer[i] <= 8'b00000000;
-		    buffer[i] <= 8'b00000000; // changed for synthesis
+		    buffer[i] = 8'b00000000; // changed for synthesis
             end
             reader1_out <= 0;
         end else begin
