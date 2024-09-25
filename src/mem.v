@@ -32,7 +32,7 @@ always @(negedge reset) begin
 	memory[13] <= 8'h6c;
 	memory[14] <= 8'h65;
 	for (i = 15; i < 256; i = i + 1) begin
-		memory[i] = 8'h00;
+		memory[i] <= 8'h00;
 	end
 end
 	
