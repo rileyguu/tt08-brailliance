@@ -52,6 +52,7 @@ module reader (
     end
 
     // Next state logic
+    /* verilator lint_off CASEINCOMPLETE */
     always @(*) begin
         case (state)
             IDLE: begin
@@ -95,6 +96,7 @@ module reader (
             default: next_state = IDLE;
         endcase
     end
+    /* verilator lint_on CASEINCOMPLETE */
 
     // Sequential logic for loading data and sending data
     always @(posedge clk or negedge reset) begin
